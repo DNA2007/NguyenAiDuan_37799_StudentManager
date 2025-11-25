@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace StudentManager
 {
@@ -20,16 +22,19 @@ namespace StudentManager
         public Form1()
         {
             InitializeComponent();
+            cboGender.Items.Add("Khác");
         }
+    }
 
-        // -----------------------
-        // KHAI BÁO LỚP SINH VIÊN
-        // -----------------------
-        public class Student
-        {
-            public string Name { get; set; }
-            public string Gender { get; set; }
-            public string Class { get; set; }
+    // -----------------------
+    // KHAI BÁO LỚP SINH VIÊN
+    // -----------------------
+    public class Student
+    {
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public string Class { get; set; }
+        public int Age { get; set; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,13 +58,14 @@ namespace StudentManager
                 Name = txtName.Text,
                 Gender = cboGender.Text,
                 Class = txtClass.Text
+                students.Add(s);
             };
 
             students.Add(s);
 
             dgvStudents.DataSource = null;
             dgvStudents.DataSource = students;
-
+            MessageBox.Show("Thêm sinh viên thành công!");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -73,7 +79,7 @@ namespace StudentManager
                 dgvStudents.DataSource = null;
                 dgvStudents.DataSource = students;
             }
-
+            MessageBox.Show("Cập nhật sinh viên thành công!");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -85,7 +91,7 @@ namespace StudentManager
                 dgvStudents.DataSource = null;
                 dgvStudents.DataSource = students;
             }
-
+            MessageBox.Show("Xóa sinh viên thành công!");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -108,3 +114,4 @@ namespace StudentManager
         }
     }
 }
+MessageBox.Show("Hello");
