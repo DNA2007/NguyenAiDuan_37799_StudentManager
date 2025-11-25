@@ -24,7 +24,7 @@
 
 ## Pull Request
 - PR: feature/intro → main  
-  Link: https://github.com/DNA2007/NguyenAiDuan_37799_StudentManager/pull/<so_PR>
+  Link: https://github.com/DNA2007/NguyenAiDuan_37799_StudentManager/pull
 
 ---
 
