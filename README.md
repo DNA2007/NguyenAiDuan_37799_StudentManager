@@ -28,8 +28,9 @@
 
 ---
 
-## Ảnh log
-![Git log](docs/git-log.png)
+## Ảnh UI ứng dụng
+![UI chính](docs/ui-main.png)
+
 
 
 
